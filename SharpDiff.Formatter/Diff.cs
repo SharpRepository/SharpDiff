@@ -58,7 +58,7 @@ namespace SharpDiff.Formatter
                 return;
             }
 
-            if (line.StartsWith("created file"))
+            if (line.StartsWith("new file"))
             {
                 _currentChangeType = FileChangeType.Created;
                 return;
