@@ -41,7 +41,7 @@ namespace SharpDiff.Formatter
             foreach (var file in diff.Files)
             {
                 var paragraph = doc.InsertParagraph(file.FileName);
-                paragraph.Bold().FontSize(20);
+                paragraph.Bold().FontSize(16);
 
                 if (file.FileChangeType == FileChangeType.Deleted)
                 {
@@ -84,9 +84,9 @@ namespace SharpDiff.Formatter
                     row.Cells[1].Width = 2.0;
                     row.Cells[2].Width = 96.0;
 
-                    row.Cells[0].Paragraphs[0].Append("...").FontSize(12).Color(Color.DarkGray);
-                    row.Cells[1].Paragraphs[0].Append("...").FontSize(12).Color(Color.DarkGray);
-                    row.Cells[2].Paragraphs[0].Append(section.Description).FontSize(12).Color(Color.DarkGray);
+                    row.Cells[0].Paragraphs[0].Append("...").FontSize(11).Color(Color.DarkGray);
+                    row.Cells[1].Paragraphs[0].Append("...").FontSize(11).Color(Color.DarkGray);
+                    row.Cells[2].Paragraphs[0].Append(section.Description).FontSize(11).Color(Color.DarkGray);
 
                     row.Cells[0].FillColor = Color.LightGray;
                     row.Cells[1].FillColor = Color.LightGray;
@@ -121,9 +121,9 @@ namespace SharpDiff.Formatter
                                 break;
                         }
 
-                        row.Cells[0].Paragraphs[0].Append(line.OldLineNumber.ToString()).FontSize(12).Color(Color.DarkGray);
-                        row.Cells[1].Paragraphs[0].Append(line.NewLineNumber.ToString()).FontSize(12).Color(Color.DarkGray);
-                        row.Cells[2].Paragraphs[0].Append(firstChar + line.Text).FontSize(12).Color(fontColor);
+                        row.Cells[0].Paragraphs[0].Append(line.OldLineNumber.ToString()).FontSize(11).Color(Color.DarkGray);
+                        row.Cells[1].Paragraphs[0].Append(line.NewLineNumber.ToString()).FontSize(11).Color(Color.DarkGray);
+                        row.Cells[2].Paragraphs[0].Append(firstChar + line.Text).FontSize(11).Color(fontColor);
                         
                         row.Cells[0].FillColor = backgroundColor;
                         row.Cells[1].FillColor = backgroundColor;
